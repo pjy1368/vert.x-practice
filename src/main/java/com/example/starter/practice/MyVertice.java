@@ -8,6 +8,7 @@ public class MyVertice extends AbstractVerticle {
     @Override
     public void start(Promise<Void> startPromise) throws Exception {
         System.out.println("MyVerticle started!");
+        vertx.deployVerticle(new BasicVerticle(), event -> System.out.println("BasicVerticle deployment complete"));
     }
 
     public void stop(Promise<Void> stopPromise) throws Exception {
