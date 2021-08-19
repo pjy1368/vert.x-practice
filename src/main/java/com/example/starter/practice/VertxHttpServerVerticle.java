@@ -18,7 +18,7 @@ public class VertxHttpServerVerticle extends AbstractVerticle {
 
             Buffer fullRequestBody = Buffer.buffer();
             if (request.method() == HttpMethod.GET) {
-                fullRequestBody.appendBuffer(Buffer.buffer(request.getParam("name")));
+                System.out.println(request.getParam("name"));
             }
             if (request.method() == HttpMethod.POST) {
                 request.handler(fullRequestBody::appendBuffer);
