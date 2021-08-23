@@ -6,6 +6,6 @@ public class MainVerticle {
 
     public static void main(String[] args) throws InterruptedException {
         Vertx vertx = Vertx.vertx();
-        vertx.deployVerticle(new VertxHttpServerVerticle());
+        vertx.deployVerticle(new VertxHttpServerVerticleWithRouter());
     }
 }
